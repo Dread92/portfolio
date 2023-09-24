@@ -1,10 +1,12 @@
 import React from 'react'
-import "./navbar.scss"
+import "./Navbar.scss"
 
-function navbar() {
+function Navbar() {
   return (
-    <div>navbar</div>
+    <nav className="navbar">
+    <div>TEST</div>
+  </nav>
   )
 }
 
-export default navbar
+export default Navbar
