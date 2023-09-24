@@ -8,6 +8,9 @@ function Navbar() {
     <nav className="navbar">
     <div className='navbar__logo'>
     <img src={logoImage} alt="Logo" />
+    <div className="navbar__text">
+        Guillaume Blanc
+      </div>
     </div>
     <ul className="navbar__links">
         <li><a href="#home">Home</a></li>

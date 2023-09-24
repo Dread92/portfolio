@@ -4,19 +4,31 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
-    background-color: #333; /* Customize the background color as needed */
+    height: 120px;
+    
+    background-color: #020F1F; /* Customize the background color as needed */
     color: #fff; /* Customize text color as needed */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     z-index: 1000; /* Optional: Add z-index if necessary to layer the navbar above other content */
+  }
+  
+  .navbar__logo {
+    display: flex; /* Apply flexbox to the logo and text container */
+    align-items: center; /* Vertically align the content */
   }
   
   .navbar__logo img {
     height: 100px; /* Adjust the logo height as needed */
     width: 115px; /* Adjust the logo width as needed */
+    padding-left:  25px;
+  }
+  
+  .navbar__text {
+    font-size: 18px; /* Adjust font size as needed */
+    margin-left: 20px; /* Add spacing between the image and text */
+    color: #fff; /* Customize text color as needed */
   }
   
   .navbar__links {
@@ -24,21 +36,24 @@
     display: flex;
     gap: 20px;
     margin: 0;
-    padding: 50px;
+    padding: 25px;
+    position: absolute; /* Position the ul element absolutely within the navbar */
+    top: 50%; /* Move the ul down to the vertical center of the navbar */
+    transform: translateY(-50%); /* Adjust for vertical alignment */
+    right: 20px; /* Position the ul on the right side */
   }
   
   .navbar__links li {
     font-size: 18px;
-    
   }
   
   .navbar__links a {
     text-decoration: none;
     color: #fff;
     transition: color 0.3s ease;
-   
   }
   
   .navbar__links a:hover {
-    color: #ff5722; /* Change the color on hover as needed */
+    color: #00FFFF; /* Change the color on hover as needed */
   }
+  
