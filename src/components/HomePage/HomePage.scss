@@ -1,25 +1,33 @@
 body {
     margin: 0 auto;
+    
     min-height: 100vh;
     @media screen and (max-width: 900px) {
       /* Add your media query styles here */
     }
   }
   .homePage__container {
-    min-height: 100vh;
-  
+   min-height: 100vh;
+    
   }
 
-  .homePage__firstblock{
+  .homePage__firstblock {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:50vh;
-    margin: 0 auto;
-    padding:0;
+    padding-top: 100px;
     gap: 50px;
-    
+
+  }
+  
+  @keyframes glowingEffect {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
   }
 
   @mixin btn-border-drawing($color: #ccc, $hover: black, $width: 2px, $vertical: top, $horizontal: left, $duration: 0.25s) {
@@ -78,7 +86,7 @@ body {
     }
   }
   
-  .homePage__title {
+  .homePage__button {
   
     background: none;
     border: none;
@@ -97,20 +105,29 @@ body {
       outline: 2px dotted white;
     }
   
-    @include btn-border-drawing(#58afd1, #00FFFF, 4px, bottom, right);
+    @include btn-border-drawing(grey, #00FFFF, 4px, bottom, right);
   }
   .homePage__text__description{
     color:white;
     font-family: 'Michroma', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     align-content: center;
     width:50%;
     gap:50px;
+    text-align: center;
+   
+    
   }
   .homePage__text{
     font-size: 24px;
     color:white;
     font-family:'Orbitron', sans-serif;
+   
+     
   }
   
-
+.arrowDown{
+  margin-top:50px;
+  color:white;
+  font-size: 30px;
+}
