@@ -1,13 +1,8 @@
 import React from 'react'
 import "./Main.scss"
 
-
-function Main() {
-  return (
-    <div className='main__container'>
-    <h1 className='main__title'>THIS IS THE MAIN TITLE</h1>
-    </div>
-  )
+function Main({ children }) {
+  return <div className='main'>{children}</div>;
 }
 
 export default Main

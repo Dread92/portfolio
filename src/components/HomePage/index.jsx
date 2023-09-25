@@ -1,16 +1,14 @@
 import React from 'react'
 import './HomePage.scss';
-import Navbar from "../Layout/Navbar";
-import Main from "../Layout/Main";
-import Footer from "../Layout/Footer"
+
 
 function HomePage() {
     return (
-      <>
-        <Navbar/>
-        <Main />
-        <Footer/>
-      </>
+     
+    <div>
+         <h1 className='homePage__title'>THIS IS THE MAIN TITLE</h1>
+         </div>
+      
     )
   }
   
