@@ -1,6 +1,6 @@
 import React from 'react'
 import "./navbar.scss"
-import logoImage from "../assets/webdev.png" // Adjust the path to your image
+import logoImage from "../../assets/webdev.png" // Adjust the path to your image
 
 
 function Navbar() {
@@ -9,11 +9,11 @@ function Navbar() {
     <div className='navbar__logo'>
     <img src={logoImage} alt="Logo" />
     <div className="navbar__text">
-        Guillaume Blanc
+        Guillaume Blanc<br/>Web Developer
       </div>
     </div>
     <ul className="navbar__links">
-        <li><a href="#home">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>

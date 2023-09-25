@@ -1,10 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import { createBrowserRouter } from "react-router-dom";
+import HomePage from "./components/HomePage/index";
+import Template from "./components/Template/index";
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+
+//La configuration du router comprend plusieurs objets qui spécifient les différentes routes de l'application.
+export const router = createBrowserRouter([
+  {
+    element: <Template/>,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />
+      },
+    
+      
+    ]
+  }
+]);

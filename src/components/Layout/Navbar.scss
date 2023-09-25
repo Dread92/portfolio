@@ -1,11 +1,12 @@
 /* navbar.scss */
 .navbar {
+    font-family: 'Orbitron', sans-serif;
+ 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 120px;
-    
     background-color: #020F1F; /* Customize the background color as needed */
     color: #fff; /* Customize text color as needed */
     display: flex;
@@ -26,7 +27,7 @@
   }
   
   .navbar__text {
-    font-size: 18px; /* Adjust font size as needed */
+    font-size: 14px; /* Adjust font size as needed */
     margin-left: 20px; /* Add spacing between the image and text */
     color: #fff; /* Customize text color as needed */
   }
@@ -34,7 +35,7 @@
   .navbar__links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 40px;
     margin: 0;
     padding: 25px;
     position: absolute; /* Position the ul element absolutely within the navbar */
@@ -45,13 +46,45 @@
   
   .navbar__links li {
     font-size: 18px;
+    transition: 300ms ease;
+    &:hover{
+      transition: 300ms ease;
+      transform: scale(1.1);
+     
+      text-shadow: 0 0 10px purple, 0 0 15px purple, 0 0 25px purple;
+  }
   }
   
-  .navbar__links a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease;
-  }
+
+.navbar__links a {
+  text-decoration: none;
+  color: #fff;
+  position: relative; /* Make the anchor a positioned element */
+  transition: color 0.3s ease;
+  padding-bottom: 5px;
+}
+
+.navbar__links a:hover {
+  color: #00FFFF; /* Change the color on hover as needed */
+}
+
+/* Add the underline effect */
+.navbar__links a::before {
+  content: ''; /* Create a pseudo-element */
+  position: absolute;
+  bottom: 0;
+ 
+  left: 0; /* Start from the left side */
+  width: 0; /* Initially, the underline has zero width */
+  height: 2px; /* Adjust the height as needed */
+  background-color: #00FFFF; /* Color of the underline */
+  transition: width 0.3s ease; /* Transition the width property */
+}
+
+.navbar__links a:hover::before {
+  width: 100%; /* Expand the underline to 100% on hover */
+}
+
   
   .navbar__links a:hover {
     color: #00FFFF; /* Change the color on hover as needed */
