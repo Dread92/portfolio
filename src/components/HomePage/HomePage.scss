@@ -18,6 +18,7 @@ body {
     align-items: center;
     padding-top: 100px;
     gap: 50px;
+    background-color: #3e5c76;
 
   }
   
@@ -105,7 +106,7 @@ body {
       outline: 2px dotted white;
     }
   
-    @include btn-border-drawing(grey, #00FFFF, 4px, bottom, right);
+    @include btn-border-drawing(grey, #f0ebd8, 4px, bottom, right);
   }
   .homePage__text__description{
     color:white;
