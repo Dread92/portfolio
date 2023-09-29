@@ -1,19 +1,25 @@
 /* navbar.scss */
 .navbar {
   font-family: 'Raleway', sans-serif;
- 
+  
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 120px;
-    background-color: #0d1321; /* Customize the background color as needed */
+    background-color: white; /* Customize the background color as needed */
     color: #fff; /* Customize text color as needed */
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000; /* Optional: Add z-index if necessary to layer the navbar above other content */
+    border-bottom: 1px solid grey 
+
   }
+
+  
+
+
   
   .navbar__logo {
     display: flex; /* Apply flexbox to the logo and text container */
@@ -21,15 +27,18 @@
   }
   
   .navbar__logo img {
-    height: 100px; /* Adjust the logo height as needed */
-    width: 115px; /* Adjust the logo width as needed */
-    padding-left:  25px;
+    height: auto; /* Adjust the logo height as needed */
+    width: 15%; /* Adjust the logo width as needed */
+    margin-left: 50px;
+    border-radius: 100%;
+    filter: grayscale(0.8);
+    border: 1px solid black;
   }
   
   .navbar__text {
     font-size: 14px; /* Adjust font size as needed */
     margin-left: 20px; /* Add spacing between the image and text */
-    color: #fff; /* Customize text color as needed */
+    color: black; /* Customize text color as needed */
   }
   
   .navbar__links {
@@ -57,14 +66,14 @@
 
 .navbar__links a {
   text-decoration: none;
-  color: #fff;
+  color: black;
   position: relative; /* Make the anchor a positioned element */
   transition: color 0.3s ease;
   padding-bottom: 5px;
 }
 
 .navbar__links a:hover {
-  color: #f0ebd8; /* Change the color on hover as needed */
+  color: black; /* Change the color on hover as needed */
 }
 
 /* Add the underline effect */
@@ -76,7 +85,7 @@
   left: 0; /* Start from the left side */
   width: 0; /* Initially, the underline has zero width */
   height: 2px; /* Adjust the height as needed */
-  background-color: #f0ebd8; /* Color of the underline */
+  background-color: black; /* Color of the underline */
   transition: width 0.3s ease; /* Transition the width property */
 }
 
@@ -86,6 +95,6 @@
 
   
   .navbar__links a:hover {
-    color: #f0ebd8; /* Change the color on hover as needed */
+    color: black; /* Change the color on hover as needed */
   }
   
