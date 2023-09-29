@@ -194,7 +194,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top:100px;
+  padding-top:75px;
   font-size: 48px;
   color: #f0ebd8;
   font-family: 'Raleway', sans-serif;
@@ -206,6 +206,7 @@ body {
   font-size: 18px;
   width: 50%;
   padding-top:50px;
+  margin-bottom: 50px;
 
 
 }
@@ -240,12 +241,13 @@ body {
 
 
 
-.title__Skills {
+.title__skills {
   font-family: 'Raleway', sans-serif;
-  font-size: 28px;
+  font-size: 48px;
   color: #f0ebd8;
   text-align: center; /* Center the title horizontally */
-  margin:50px;
+  margin:25px;
+  font-weight: 300;
 }
 .homePage__skills-container {
   
@@ -253,7 +255,7 @@ body {
   margin: 0 auto; /* Center the container horizontally */
 }
 .homePage__skills {
-  padding-top:50px;
+  padding-top:25px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -275,4 +277,9 @@ body {
   max-width: calc(33.33% - 20px); /* Set the maximum width for each skill item (adjust as needed) */
 }
 
-/* ... remaining CSS ... */
+a {
+  text-decoration: underline;
+  color: inherit;
+  font-weight: bold;
+  /* Additional styles for links in the .my-section class */
+}
