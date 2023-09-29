@@ -26,12 +26,10 @@ body {
 
 .homePage__secondblock {
   height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
   gap: 50px;
-  background-color: rgb(43, 41, 41);
+  background-color: rgb(48, 47, 47);
+  
 }
 
 .homePage__thirdblock {
@@ -46,14 +44,6 @@ body {
   background-attachment: fixed;
 }
 
-@keyframes glowingEffect {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
-}
 
 /* Button Styles */
 
@@ -201,7 +191,11 @@ body {
 /* Second Block Text Styles */
 
 .homePage__text__secondblock {
-  font-size: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top:100px;
+  font-size: 48px;
   color: #f0ebd8;
   font-family: 'Raleway', sans-serif;
 }
@@ -209,13 +203,20 @@ body {
 .homePage__text__description__secondblock {
   color: white;
   font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  align-content: center;
+  font-size: 18px;
   width: 50%;
-  gap: 50px;
-  text-align: center;
-}
+  padding-top:50px;
 
+
+}
+.homePage__subBlock{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ text-align: center;
+  align-items: center;
+
+}
 /* Third Block Text Styles */
 
 .homePage__text__description__thirdblock {
@@ -235,3 +236,43 @@ body {
   color: black;
   font-family: 'Raleway', sans-serif;
 }
+
+
+
+
+.title__Skills {
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  color: #f0ebd8;
+  text-align: center; /* Center the title horizontally */
+  margin:50px;
+}
+.homePage__skills-container {
+  
+  max-width: 900px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+}
+.homePage__skills {
+  padding-top:50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center; /* Center skill items horizontally */
+}
+
+.homePage__skills__list {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  color: black;
+  margin: 5px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-grow: 1; /* Allow skill items to grow and fill the available space */
+  max-width: calc(33.33% - 20px); /* Set the maximum width for each skill item (adjust as needed) */
+}
+
+/* ... remaining CSS ... */
