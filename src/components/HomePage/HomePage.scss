@@ -1,24 +1,45 @@
 body {
     margin: 0 auto;
     
-    min-height: 100vh;
     @media screen and (max-width: 900px) {
       /* Add your media query styles here */
     }
   }
   .homePage__container {
-   min-height: 100vh;
-    
+ 
+
   }
 
   .homePage__firstblock {
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: #3e5c76;
+
+  }
+  .homePage__secondblock {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 100px;
     gap: 50px;
-    background-color: #3e5c76;
+    background-color: #1d2d44;
+
+  }
+  .homePage__thirdblock {
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    gap: 50px;
+    background-color: #f0ebd8;
 
   }
   
