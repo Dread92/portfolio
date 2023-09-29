@@ -1,140 +1,141 @@
+/* Global Styles */
+
 body {
-    margin: 0 auto;
-    
-    @media screen and (max-width: 900px) {
-      /* Add your media query styles here */
-    }
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 900px) {
+  /* Add your media query styles here */
+}
+
+/* HomePage Styles */
+
+.homePage__container {}
+
+.homePage__firstblock {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-image: url("../../assets/websitebg.jpg");
+  background-size: cover;
+  background-attachment: fixed; /* Set the background image to be fixed */
+}
+
+.homePage__secondblock {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color: rgb(43, 41, 41);
+}
+
+.homePage__thirdblock {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-image: url("../../assets/websitebg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@keyframes glowingEffect {
+  0% {
+    background-position: 200% 0;
   }
-  .homePage__container {
- 
+  100% {
+    background-position: -200% 0;
+  }
+}
 
+/* Button Styles */
+
+@mixin btn-border-drawing($color: #f0ebd8, $hover: black, $width: 2px, $vertical: top, $horizontal: left, $duration: 0.25s) {
+  box-shadow: inset 0 0 0 $width $color;
+  color: $color;
+  transition: color $duration calc(#{$duration} / 3);
+
+  position: relative;
+
+  &::before,
+  &::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    #{$vertical}: 0;
+    #{$horizontal}: 0;
   }
 
-  .homePage__firstblock {
-    height:100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-   background-image: url("../../assets/websitebg.jpg");
-   background-size: cover;
-   
+  &::before {
+    $h-side: if($horizontal == 'left', 'right', 'left');
 
-
-  }
-  .homePage__secondblock {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
-    gap: 50px;
-    background-color: #1d2d44;
-
-  }
-  .homePage__thirdblock {
-    height:100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
-    gap: 50px;
-    background-color: #3e5c76;
-    
-  }
-  
-  @keyframes glowingEffect {
-    0% {
-      background-position: 200% 0;
-    }
-    100% {
-      background-position: -200% 0;
-    }
+    border-#{$vertical}-width: $width;
+    border-#{$h-side}-width: $width;
   }
 
-  @mixin btn-border-drawing($color: #f0ebd8, $hover: black, $width: 2px, $vertical: top, $horizontal: left, $duration: 0.25s) {
-    box-shadow: inset 0 0 0 $width $color;
-    color: $color;
-    transition: color $duration calc(#{$duration} / 3);
+  &::after {
+    $v-side: if($vertical == 'top', 'bottom', 'top');
 
-    position: relative;
-  
+    border-#{$v-side}-width: $width;
+    border-#{$horizontal}-width: $width;
+  }
+
+  &:hover {
+    color: $hover;
+
     &::before,
     &::after {
-      border: 0 solid transparent;
-      box-sizing: border-box;
-      content: '';
-      pointer-events: none;
-      position: absolute;
-      width: 0;
-      height: 0;
-  
-      #{$vertical}: 0;
-      #{$horizontal}: 0;
+      border-color: $hover;
+      transition: border-color 0s, width $duration, height $duration;
+      width: 100%;
+      height: 100%;
     }
-  
+
     &::before {
-      $h-side: if($horizontal == 'left', 'right', 'left');
-  
-      border-#{$vertical}-width: $width;
-      border-#{$h-side}-width: $width;
+      transition-delay: 0s, 0s, $duration;
     }
-  
+
     &::after {
-      $v-side: if($vertical == 'top', 'bottom', 'top');
-  
-      border-#{$v-side}-width: $width;
-      border-#{$horizontal}-width: $width;
-    }
-  
-    &:hover {
-      color: $hover;
-  
-      &::before,
-      &::after {
-        border-color: $hover;
-        transition: border-color 0s, width $duration, height $duration;
-        width: 100%;
-        height: 100%;
-      }
-  
-      &::before {
-        transition-delay: 0s, 0s, $duration;
-      }
-  
-      &::after {
-        transition-delay: 0s, $duration, 0s;
-      }
+      transition-delay: 0s, $duration, 0s;
     }
   }
-  
-  .homePage__button {
-    transform: scale(0);
+}
+
+.homePage__button {
+  transform: scale(0);
   animation: popIn 3s ease forwards;
-    transform: translateY(20px); /* Initial vertical translation */
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 28px;
-    color: #f0ebd8;
-    font-family: 'Raleway', sans-serif;
-    width: fit-content; /* Adjust width to fit content */
-    padding: 20px; /* Add padding to create space around the title */
-    position: relative;
-    padding: 1em 2em;
-    letter-spacing: 0.05rem;
-    position: relative;
-  
-    &:focus {
-      outline: 2px dotted #f0ebd8;
-    }
-  
-    @include btn-border-drawing(grey, black, 4px, bottom, right);
+  transform: translateY(20px); /* Initial vertical translation */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: #f0ebd8;
+  font-family: 'Raleway', sans-serif;
+  width: fit-content; /* Adjust width to fit content */
+  padding: 20px; /* Add padding to create space around the title */
+  position: relative;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+  position: relative;
+
+  &:focus {
+    outline: 2px dotted #f0ebd8;
   }
-  
+
+  @include btn-border-drawing(grey, black, 4px, bottom, right);
+}
 
 @keyframes popIn {
   from {
@@ -145,83 +146,92 @@ body {
   }
 }
 
+/* Text Styles */
 
-  
-  
-  .homePage__text__description{
-    color:black;
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    align-content: center;
-    width:50%;
-    gap:50px;
-    text-align: center;
-    
-    animation: popIn 2s ease forwards;    
-  }
+.homePage__text__description {
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  align-content: center;
+  width: 50%;
+  gap: 50px;
+  text-align: center;
+  animation: popIn 2s ease forwards;
+}
 
-  @keyframes fadeInAndTranslate {
-    from {
-      opacity: 0;
-      transform: translateY(10px); /* Start position */
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0); /* End position (no vertical translation) */
-    }
+@keyframes fadeInAndTranslate {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* Start position */
   }
-  .homePage__text{
-    font-size: 64px;
-    font-weight: 600;
-    color:black;
-    font-family: 'Raleway', sans-serif;
-    animation: popIn 1s ease forwards;
-     
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End position (no vertical translation) */
   }
-  
-.arrowDown{
-  margin-top:50px;
-  color:black;
+}
+
+.homePage__text {
+  font-size: 64px;
+  font-weight: 600;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  animation: popIn 1s ease forwards;
+}
+
+/* Arrow Styles */
+
+.arrowDown {
+  margin-top: 50px;
+  color: black;
   font-size: 30px;
-  
-
 }
 
 
-.homePage__text__description__secondblock{
-  color:white;
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(100px); /* Start position, move it down */
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.animate-on-scroll.show {
+  opacity: 1;
+  transform: translateY(0); /* End position, move it up to its original position */
+}
+
+/* Second Block Text Styles */
+
+.homePage__text__secondblock {
+  font-size: 64px;
+  color: #f0ebd8;
+  font-family: 'Raleway', sans-serif;
+}
+
+.homePage__text__description__secondblock {
+  color: white;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
   align-content: center;
-  width:50%;
-  gap:50px;
+  width: 50%;
+  gap: 50px;
   text-align: center;
- 
 }
 
-.homePage__text__description__thirdblock{
-  color:#f0ebd8;
+/* Third Block Text Styles */
+
+.homePage__text__description__thirdblock {
+  color: black;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
   align-content: center;
-  width:50%;
-  gap:50px;
+  width: 50%;
+  gap: 50px;
   text-align: center;
- 
 }
 
-.homePage__text__secondblock{
-  font-size: 64px;
-  color:#f0ebd8;
-  font-family: 'Raleway', sans-serif;
- 
-   
-}
 
-.homePage__text__thirdblock{
+
+.homePage__text__thirdblock {
   font-size: 64px;
-  color:#f0ebd8;
+  color: black;
   font-family: 'Raleway', sans-serif;
- 
-   
 }
