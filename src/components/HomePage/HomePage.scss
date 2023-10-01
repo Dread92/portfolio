@@ -43,6 +43,91 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+.homePage__thirdblock {
+  background-color: #333; // Black background color
+  color: white; // White text color
+  font-family: 'Raleway', sans-serif; // Use Raleway font
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; // Center the form vertically in the section
+
+    .heading {
+      text-align: center;
+      
+    
+
+      .heading-sec__main {
+        display: block; // Display "Contact" as a block element
+        font-weight: 600;
+        color:black;
+        margin-bottom: 50px;
+        font-size: 48px;
+      }
+
+      .heading-sec__sub {
+        display: block; // Display the subheading as a block element
+        font-size: 18px; // Adjust the font size as needed
+        margin-top: 10px; // Add some top margin to create space between the spans
+        color:black;
+        margin-bottom: 25px;
+
+      }
+    }
+
+    .contact__form-container {
+      background-color: #444; // Grey background color
+      padding: 20px;
+      border-radius: 10px;
+      width: 70%; // Make the form container 70% of the parent container
+      max-width: 600px; // Set a maximum width for the form container
+
+      .contact__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .contact__form-field {
+          margin-bottom: 20px;
+
+          .contact__form-label {
+            font-weight: 500;
+            
+          }
+
+          .contact__form-input,
+          .contact__form-textarea {
+            width: calc(100% - 22px); // Adjusted width to account for padding and border
+            padding: 10px;
+            border: 1px solid #666; // Grey border color
+            border-radius: 5px;
+            background-color: #fff; // White background color
+            color: #333; // Black text color
+           
+            font-family: 'Raleway', sans-serif; // Use Raleway font
+          }
+        }
+
+        .contact__btn {
+          background-color: #000; // Black button background color
+          color: #fff; // White button text color
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-family: 'Raleway', sans-serif; // Use Raleway font
+
+          &:hover {
+            background-color: #222; // Darker black on hover
+          }
+        }
+      }
+    }
+  }
+}
 
 
 /* Button Styles */
@@ -218,26 +303,6 @@ body {
   align-items: center;
 
 }
-/* Third Block Text Styles */
-
-.homePage__text__description__thirdblock {
-  color: black;
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  align-content: center;
-  width: 50%;
-  gap: 50px;
-  text-align: center;
-}
-
-
-
-.homePage__text__thirdblock {
-  font-size: 64px;
-  color: black;
-  font-family: 'Raleway', sans-serif;
-}
-
 
 
 
