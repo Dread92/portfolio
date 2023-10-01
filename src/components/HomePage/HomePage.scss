@@ -19,7 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 50px;
-  background-image: url("../../assets/websitebg.jpg");
+  background-image: url("../../assets/websitebg.webp");
   background-size: cover;
   background-attachment: fixed; /* Set the background image to be fixed */
   @media screen and (max-width: 800px) and (min-width: 651px) {
@@ -44,8 +44,8 @@ gap:20px;
   justify-content: center;
   align-items: center;
   gap: 50px;
-  background-image: url("../../assets/websitebg.jpg");
-  background-size: cover;
+  background-image: url("../../assets/websitebg.webp");
+  background-size:cover;
   background-attachment: fixed;
   @media screen and (max-width: 800px) and (min-width: 651px) {
     gap:20px;     
