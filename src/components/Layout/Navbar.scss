@@ -1,6 +1,4 @@
-/* navbar.scss */
-/* navbar.scss */
-
+/* Navbar */
 .navbar {
   font-family: 'Raleway', sans-serif;
   position: fixed;
@@ -15,37 +13,35 @@
   align-items: center;
   z-index: 1000;
   transition: top 1s ease; /* Transition the 'top' property */
-}
 
-.navbar.show {
-  top: 0; /* Move the navbar to its normal position */
-  transition: top 1s ease; /* Transition the 'top' property */
-}
+  &.show {
+    top: 0; /* Move the navbar to its normal position */
+    transition: top 1s ease; /* Transition the 'top' property */
+  }
 
-
-
-  
+  /* Logo and Text */
   .navbar__logo {
     display: flex; /* Apply flexbox to the logo and text container */
     align-items: center; /* Vertically align the content */
+
+    img {
+      height: auto; /* Adjust the logo height as needed */
+      width: 15%; /* Adjust the logo width as needed */
+      margin-left: 50px;
+      border-radius: 100%;
+      filter: grayscale(0.8);
+      border: 3px solid white;
+    }
+
+    .navbar__text {
+      font-weight: 500;
+      font-size: 14px; /* Adjust font size as needed */
+      margin-left: 20px; /* Add spacing between the image and text */
+      color: white; /* Customize text color as needed */
+    }
   }
-  
-  .navbar__logo img {
-    height: auto; /* Adjust the logo height as needed */
-    width: 15%; /* Adjust the logo width as needed */
-    margin-left: 50px;
-    border-radius: 100%;
-    filter: grayscale(0.8);
-    border: 3px solid white;
-  }
-  
-  .navbar__text {
-    font-weight: 500;
-    font-size: 14px; /* Adjust font size as needed */
-    margin-left: 20px; /* Add spacing between the image and text */
-    color: white; /* Customize text color as needed */
-  }
-  
+
+  /* Links */
   .navbar__links {
     list-style: none;
     display: flex;
@@ -56,51 +52,44 @@
     top: 50%; /* Move the ul down to the vertical center of the navbar */
     transform: translateY(-50%); /* Adjust for vertical alignment */
     right: 20px; /* Position the ul on the right side */
-  }
-  
-  .navbar__links li {
-    font-weight: 500;
-    font-size: 18px;
-    transition: 300ms ease;
-    &:hover{
+
+    li {
+      font-weight: 500;
+      font-size: 18px;
       transition: 300ms ease;
-      transform: scale(1.1);
-   
+
+      &:hover {
+        transition: 300ms ease;
+        transform: scale(1.1);
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        position: relative; /* Make the anchor a positioned element */
+        transition: color 0.3s ease;
+        padding-bottom: 5px;
+
+        &:hover {
+          color: white; /* Change the color on hover as needed */
+        }
+
+        /* Add the underline effect */
+        &::before {
+          content: ''; /* Create a pseudo-element */
+          position: absolute;
+          bottom: 0;
+          left: 0; /* Start from the left side */
+          width: 0; /* Initially, the underline has zero width */
+          height: 2px; /* Adjust the height as needed */
+          background-color: white; /* Color of the underline */
+          transition: width 0.3s ease; /* Transition the width property */
+        }
+
+        &:hover::before {
+          width: 100%; /* Expand the underline to 100% on hover */
+        }
+      }
+    }
   }
-  }
-  
-
-.navbar__links a {
-  text-decoration: none;
-  color: white;
-  position: relative; /* Make the anchor a positioned element */
-  transition: color 0.3s ease;
-  padding-bottom: 5px;
 }
-
-.navbar__links a:hover {
-  color: white; /* Change the color on hover as needed */
-}
-
-/* Add the underline effect */
-.navbar__links a::before {
-  content: ''; /* Create a pseudo-element */
-  position: absolute;
-  bottom: 0;
- 
-  left: 0; /* Start from the left side */
-  width: 0; /* Initially, the underline has zero width */
-  height: 2px; /* Adjust the height as needed */
-  background-color: white; /* Color of the underline */
-  transition: width 0.3s ease; /* Transition the width property */
-}
-
-.navbar__links a:hover::before {
-  width: 100%; /* Expand the underline to 100% on hover */
-}
-
-  
-  .navbar__links a:hover {
-    color: white; /* Change the color on hover as needed */
-  }
-  

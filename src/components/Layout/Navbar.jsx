@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './navbar.scss';
 import logoImage from '../../assets/webdev.png';
+import { Link } from 'react-scroll'; // Import Link from react-scroll
 
 function Navbar() {
   useEffect(() => {
@@ -24,8 +25,30 @@ function Navbar() {
       <ul className="navbar__links">
         <li><a href="/">Home</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li>
+          {/* Use Link from react-scroll for smooth scrolling */}
+          <Link
+            to="homePage__secondblock"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-70} // Adjust the offset if needed to account for your navbar's height
+          >
+            About
+          </Link>
+        </li>
+        <li>
+          {/* Use Link from react-scroll for smooth scrolling */}
+          <Link
+            to="homePage__thirdblock"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-70} // Adjust the offset if needed to account for your navbar's height
+          >
+            Contact
+          </Link>
+        </li>
       </ul>
     </nav>
   );
