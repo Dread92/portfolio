@@ -31,6 +31,7 @@ function HomePage() {
         <div className='homePage__text'>Hi, I'm Guillaume</div>
         <div className='homePage__text__description'>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</div>
         <h1 className='homePage__button'>PROJECTS</h1>
+        
         <i className="fa-sharp fa-solid fa-arrow-down fa-bounce arrowDown"></i>
       </section>
 
