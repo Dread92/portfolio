@@ -27,14 +27,14 @@ function HomePage() {
 
   return (
     <div className='homePage__container'>
-      <div className='homePage__firstblock'>
-        <div className='homePage__text'>Hi, i'm Guillaume</div>
+      <section className='homePage__firstblock'>
+        <div className='homePage__text'>Hi, I'm Guillaume</div>
         <div className='homePage__text__description'>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</div>
         <h1 className='homePage__button'>PROJECTS</h1>
         <i className="fa-sharp fa-solid fa-arrow-down fa-bounce arrowDown"></i>
-      </div>
+      </section>
 
-      <div className='homePage__secondblock'>
+      <section className='homePage__secondblock'>
         <div className='homePage__text__secondblock animate-on-scroll'>About Me</div>
         <div className='homePage__subBlock'>
         <div className='homePage__text__description__secondblock animate-on-scroll'>
@@ -60,12 +60,60 @@ function HomePage() {
             <div className='homePage__skills__list animate-on-scroll'>Node Js</div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className='homePage__thirdblock'>
-        <div className='homePage__text__thirdblock animate-on-scroll'>Hi, i'm Guillaume</div>
-        <div className='homePage__text__description__thirdblock animate-on-scroll'>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</div>
+      <section className="homePage__thirdblock" >
+      <div className="main-container">
+        <h2 className="heading heading-sec heading-sec__mb-med">
+          <span className="heading-sec__main heading-sec__main--lt">Contact</span>
+          <span className="heading-sec__sub heading-sec__sub--lt">
+            If you wish to contact me, feel free to fill the form, i'll get back to you as fast as possible.
+          </span>
+        </h2>
+        <div class="contact__form-container">
+          <form   action="https://formspree.io/f/xrgwoqap"
+  method="POST" class="contact__form">
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="name">Name</label>
+              <input
+                required
+                placeholder="Enter Your Name"
+                type="text"
+                class="contact__form-input"
+                name="name"
+                id="name"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email">Email</label>
+              <input
+                required
+                placeholder="Enter Your Email"
+                type="text"
+                class="contact__form-input"
+                name="email"
+                id="email"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="message">Message</label>
+              <textarea
+                required
+                cols="30"
+                rows="10"
+                class="contact__form-input"
+                placeholder="Enter Your Message"
+                name="message"
+                id="message"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn--theme contact__btn">
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
+    </section>
     </div>
   );
 }
