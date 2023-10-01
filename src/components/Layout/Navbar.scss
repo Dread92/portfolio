@@ -14,7 +14,7 @@
   z-index: 1000;
   transition: top 1s ease; /* Transition the 'top' property */
   @media screen and (max-width: 800px) and (min-width: 651px) {
-  background-color: blue; 
+
    
 }
   
@@ -28,7 +28,7 @@
     display: flex; /* Apply flexbox to the logo and text container */
     align-items: center; /* Vertically align the content */
     @media screen and (max-width: 800px) and (min-width: 651px) {
-      background-color: blue; 
+      
       justify-content: flex-start;  
     }
     img {
@@ -39,7 +39,7 @@
       filter: grayscale(0.8);
       border: 3px solid white;
       @media screen and (max-width: 800px) and (min-width: 651px) {
-        background-color: blue; 
+       
          width:10%; 
          margin-left: 10px;
       }
@@ -61,7 +61,7 @@
       margin-left: 20px; /* Add spacing between the image and text */
       color: white; /* Customize text color as needed */
       @media screen and (max-width: 800px) and (min-width: 651px) {
-        background-color: blue; 
+      
          font-size:14px;
          margin-left: 10px;
       }

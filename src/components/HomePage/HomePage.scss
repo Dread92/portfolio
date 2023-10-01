@@ -22,6 +22,9 @@ body {
   background-image: url("../../assets/websitebg.jpg");
   background-size: cover;
   background-attachment: fixed; /* Set the background image to be fixed */
+  @media screen and (max-width: 800px) and (min-width: 651px) {
+gap:20px;     
+  }
 }
 
 .homePage__secondblock {
@@ -29,7 +32,9 @@ body {
 
   gap: 50px;
   background-color: rgb(48, 47, 47);
-  
+  @media screen and (max-width: 800px) and (min-width: 651px) {
+    gap:20px;     
+      }
 }
 
 .homePage__thirdblock {
@@ -42,6 +47,9 @@ body {
   background-image: url("../../assets/websitebg.jpg");
   background-size: cover;
   background-attachment: fixed;
+  @media screen and (max-width: 800px) and (min-width: 651px) {
+    gap:20px;     
+      }
 }
 .homePage__thirdblock {
   background-color: #333; // Black background color
@@ -57,7 +65,7 @@ body {
 
     .heading {
       text-align: center;
-      
+      width:80%;
     
 
       .heading-sec__main {
@@ -66,6 +74,13 @@ body {
         color:black;
         margin-bottom: 50px;
         font-size: 48px;
+        @media screen and (max-width: 800px) and (min-width: 651px) {
+             font-size:40px;
+              }
+              @media screen and (max-width: 651px) and (min-width: 200px) {
+                font-size:25px;
+                  }
+        
       }
 
       .heading-sec__sub {
@@ -74,6 +89,13 @@ body {
         margin-top: 10px; // Add some top margin to create space between the spans
         color:black;
         margin-bottom: 25px;
+        @media screen and (max-width: 800px) and (min-width: 651px) {
+          font-size:16px;
+           }
+           @media screen and (max-width: 651px) and (min-width: 200px) {
+             font-size:14px;
+            
+               }
 
       }
     }
@@ -84,7 +106,12 @@ body {
       border-radius: 10px;
       width: 70%; // Make the form container 70% of the parent container
       max-width: 600px; // Set a maximum width for the form container
-
+ @media screen and (max-width: 800px) and (min-width: 651px) {
+  width: 66%;   
+      }
+      @media screen and (max-width: 651px) and (min-width: 200px) {
+        width: 66%;  
+          }
       .contact__form {
         display: flex;
         flex-direction: column;
@@ -204,6 +231,12 @@ body {
   padding: 1em 2em;
   letter-spacing: 0.05rem;
   position: relative;
+  @media screen and (max-width: 800px) and (min-width: 651px) {
+    font-size: 24px;    
+      }
+      @media screen and (max-width: 651px) and (min-width: 200px) {
+        font-size: 18px;    
+          }
 
   &:focus {
     outline: 2px dotted #f0ebd8;
@@ -232,6 +265,12 @@ body {
   gap: 50px;
   text-align: center;
   animation: popIn 2s ease forwards;
+  @media screen and (max-width: 800px) and (min-width: 651px) {
+    font-size: 18px;    
+      }
+      @media screen and (max-width: 651px) and (min-width: 200px) {
+        font-size: 15px;    
+          }
 }
 
 @keyframes fadeInAndTranslate {
@@ -251,6 +290,12 @@ body {
   color: black;
   font-family: 'Raleway', sans-serif;
   animation: popIn 1s ease forwards;
+  @media screen and (max-width: 800px) and (min-width: 651px) {
+    font-size: 48px;    
+      }
+      @media screen and (max-width: 651px) and (min-width: 200px) {
+        font-size: 40px;    
+          }
 }
 
 /* Arrow Styles */
@@ -283,6 +328,12 @@ body {
   font-size: 48px;
   color: #f0ebd8;
   font-family: 'Raleway', sans-serif;
+  @media screen and (max-width: 800px) and (min-width: 651px) {
+    font-size: 40px;    
+      }
+      @media screen and (max-width: 651px) and (min-width: 200px) {
+        font-size: 25px;    
+          }
 }
 
 .homePage__text__description__secondblock {
@@ -292,7 +343,15 @@ body {
   width: 50%;
   padding-top:50px;
   margin-bottom: 50px;
-
+  @media screen and (max-width: 800px) and (min-width: 651px) {
+    font-size: 16px;    
+      }
+      @media screen and (max-width: 651px) and (min-width: 200px) {
+        font-size: 14px;
+        padding-top:30px;
+        width: 80%;
+        line-height: 20px;    
+          }
 
 }
 .homePage__subBlock{
@@ -313,6 +372,12 @@ body {
   text-align: center; /* Center the title horizontally */
   margin:25px;
   font-weight: 300;
+  @media screen and (max-width: 800px) and (min-width: 651px) {
+    font-size: 40px;    
+      }
+      @media screen and (max-width: 651px) and (min-width: 200px) {
+        font-size: 25px;    
+          }
 }
 .homePage__skills-container {
   
@@ -327,6 +392,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   text-align: center; /* Center skill items horizontally */
+  
 }
 
 .homePage__skills__list {
@@ -339,7 +405,13 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   flex-grow: 1; /* Allow skill items to grow and fill the available space */
-  max-width: calc(33.33% - 20px); /* Set the maximum width for each skill item (adjust as needed) */
+  max-width: calc(100% - 20px); /* Set the maximum width for each skill item (adjust as needed) */
+  @media screen and (max-width: 800px) and (min-width: 651px) {
+    font-size: 16px;    
+      }
+      @media screen and (max-width: 651px) and (min-width: 200px) {
+        font-size: 14px;    
+          }
 }
 
 a {
