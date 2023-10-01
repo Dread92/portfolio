@@ -386,6 +386,7 @@ gap:20px;
 }
 .homePage__skills {
   padding-top:25px;
+  margin:20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -405,7 +406,7 @@ gap:20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   flex-grow: 1; /* Allow skill items to grow and fill the available space */
-  max-width: calc(100% - 20px); /* Set the maximum width for each skill item (adjust as needed) */
+  max-width: calc(33.333% - 20px); /* Set the maximum width for each skill item (adjust as needed) */
   @media screen and (max-width: 800px) and (min-width: 651px) {
     font-size: 16px;    
       }

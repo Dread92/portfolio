@@ -62,8 +62,8 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="homePage__thirdblock" >
-      <div className="main-container">
+      <section className="homePage__thirdblock " >
+      <div className="main-container animate-on-scroll">
         <h2 className="heading heading-sec heading-sec__mb-med">
           <span className="heading-sec__main heading-sec__main--lt">Contact</span>
           <span className="heading-sec__sub heading-sec__sub--lt">
