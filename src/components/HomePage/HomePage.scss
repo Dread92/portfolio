@@ -215,7 +215,13 @@ gap:20px;
   }
 }
 
+
+.project-link {
+  text-decoration: none; /* Remove underline */
+}
+
 .homePage__button {
+  
   transform: scale(0);
   animation: popIn 3s ease forwards;
   transform: translateY(20px); /* Initial vertical translation */
