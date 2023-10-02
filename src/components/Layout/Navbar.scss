@@ -74,9 +74,9 @@
   }
 
 .navbar__weather{
- 
   position: absolute;
-  top: 40%;
+  font-size: 14px;
+  top: 52%;
   left: 20%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -95,10 +95,8 @@
 
 
 .navbar__weather__list{
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-
+  
+list-style-type: none;
 }
   /* Links */
   .navbar__links {
