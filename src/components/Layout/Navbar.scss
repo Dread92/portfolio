@@ -74,16 +74,30 @@
   }
 
 .navbar__weather{
-display: flex;
-justify-content: center;
-
+ 
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  @media screen and (max-width: 1300px) and (min-width: 1100px) {
+    left: 30%;
+     
+  }
+  @media screen and (max-width: 1100px) and (min-width: 650px) {
+    left: 40%;
+     
+  }
+  @media screen and (max-width: 900px) and (min-width: 50px) {
+   display: none;
+  }
 }
 
 
 .navbar__weather__list{
   background-color: black;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 
 }
   /* Links */
@@ -156,3 +170,5 @@ justify-content: center;
     }
   }
 }
+
+
