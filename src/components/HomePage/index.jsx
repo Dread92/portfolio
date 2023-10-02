@@ -71,44 +71,44 @@ function HomePage() {
             If you wish to contact me, feel free to fill the form, i'll get back to you as fast as possible.
           </span>
         </h2>
-        <div class="contact__form-container">
+        <div className="contact__form-container">
           <form   action="https://formspree.io/f/xrgwoqap"
-  method="POST" class="contact__form">
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="name">Name</label>
+  method="POST" className="contact__form">
+            <div className="contact__form-field">
+              <label className="contact__form-label" for="name">Name</label>
               <input
                 required
                 placeholder="Enter Your Name"
                 type="text"
-                class="contact__form-input"
+                className="contact__form-input"
                 name="name"
                 id="name"
               />
             </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="email">Email</label>
+            <div className="contact__form-field">
+              <label className="contact__form-label" for="email">Email</label>
               <input
                 required
                 placeholder="Enter Your Email"
                 type="text"
-                class="contact__form-input"
+                className="contact__form-input"
                 name="email"
                 id="email"
               />
             </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="message">Message</label>
+            <div className="contact__form-field">
+              <label className="contact__form-label" for="message">Message</label>
               <textarea
                 required
                 cols="30"
                 rows="10"
-                class="contact__form-input"
+                className="contact__form-input"
                 placeholder="Enter Your Message"
                 name="message"
                 id="message"
               ></textarea>
             </div>
-            <button type="submit" class="btn btn--theme contact__btn">
+            <button type="submit" className="btn btn--theme contact__btn">
               Submit
             </button>
           </form>

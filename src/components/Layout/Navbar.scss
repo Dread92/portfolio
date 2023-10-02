@@ -72,8 +72,19 @@
       
     }
   }
+
 .navbar__weather{
-  background-color: yellow;
+display: flex;
+justify-content: center;
+
+}
+
+
+.navbar__weather__list{
+  background-color: black;
+  display: flex;
+  flex-direction: column-reverse;
+
 }
   /* Links */
   .navbar__links {

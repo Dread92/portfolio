@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './navbar.scss';
 import logoImage from '../../assets/webdev.png';
-import { Link } from 'react-scroll'; // Import Link from react-scroll
+import { Link } from 'react-scroll';
+
+
+// Function to convert temperature from Kelvin to Celsius
+const convertKelvinToCelsius = (temperature) => {
+  return (temperature - 273.15).toFixed(2);
+};
 
 function Navbar() {
   const [weatherData, setWeatherData] = useState(null);
@@ -17,27 +23,31 @@ function Navbar() {
     fetchWeatherData();
   }, []);
 
-// Function to fetch weather data from your API
-const fetchWeatherData = async () => {
-  try {
-    // Access the API key from the environment variable
-    const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
+  // Function to fetch weather data from your API
+  const fetchWeatherData = async () => {
+    try {
+      // Access the API key from the environment variable
+      const apiKey = import.meta.env.VITE_API_KEY
+      console.log(import.meta.env.VITE_API_KEY)
 
-    // Replace 'YOUR_WEATHER_API_ENDPOINT' with your weather API endpoint
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Kyiv&appid=${apiKey}`);
-    if (!response.ok) {
-      throw new Error('Failed to fetch weather data');
+      // Replace 'YOUR_WEATHER_API_ENDPOINT' with your weather API endpoint
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Kyiv&appid=${apiKey}`);
+
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch weather data');
+      }
+
+      const data = await response.json();
+      setWeatherData(data);
+    } catch (error) {
+      console.error('Error fetching weather data:', error);
     }
-
-    const data = await response.json();
-    setWeatherData(data);
-  } catch (error) {
-    console.error('Error fetching weather data:', error);
-  }
-};
+  };
 
   return (
     <nav className="navbar">
+      
       <div className="navbar__logo">
         <img src={logoImage} alt="Logo" />
         <div className="navbar__text">
@@ -46,6 +56,7 @@ const fetchWeatherData = async () => {
           Web Developer
         </div>
       </div>
+      
       <ul className="navbar__links">
         <li><a href="/">Home</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -73,26 +84,33 @@ const fetchWeatherData = async () => {
             Contact
           </Link>
         </li>
+        </ul>
         {weatherData && (
-          <li className="navbar__weather">
+          <ul className='navbar__weather'>
+          <li className="navbar__weather__list">
             <div>
-              {/* Display weather description */}
-              <span>Weather: {weatherData.current.weather_descriptions[0]}</span>
+              {/* Display city name */}
+              <span>City: {weatherData.name}</span>
             </div>
             <div>
-              {/* Display temperature */}
-              <span>Temperature: {weatherData.current.temperature}&deg;C</span>
+              {/* Display temperature in Celsius */}
+              <span>Temperature: {convertKelvinToCelsius(weatherData.main.temp)}°C</span>
+            </div>
+            <div>
+              {/* Display weather description */}
+              <span>Weather: {weatherData.weather[0].description}</span>
             </div>
             <div>
               {/* Display weather icon */}
               <img
-                src={weatherData.current.weather_icons[0]}
-                alt={weatherData.current.weather_descriptions[0]}
+                src={`https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`}
+                alt={weatherData.weather[0].description}
               />
             </div>
           </li>
+          </ul>
         )}
-      </ul>
+      
     </nav>
   );
 }
