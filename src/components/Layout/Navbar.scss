@@ -1,4 +1,8 @@
-/* Navbar */
+// Variables
+$font-size-medium: 14px;
+$font-color-white: white;
+
+// Navbar Styles
 .navbar {
   font-family: 'Raleway', sans-serif;
   position: fixed;
@@ -7,132 +11,118 @@
   width: 100%;
   height: 120px;
   background-color: black;
-  color: #fff;
+  color: $font-color-white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  transition: top 1s ease; /* Transition the 'top' property */
-  @media screen and (max-width: 800px) and (min-width: 651px) {
+  transition: top 1s ease;
 
-   
-}
-  
   &.show {
     top: 0; /* Move the navbar to its normal position */
-    transition: top 1s ease; /* Transition the 'top' property */
   }
 
-  /* Logo and Text */
+  // Logo and Text Styles
   .navbar__logo {
-    display: flex; /* Apply flexbox to the logo and text container */
-    align-items: center; /* Vertically align the content */
-    @media screen and (max-width: 800px) and (min-width: 651px) {
-      
-      justify-content: flex-start;  
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 800px) {
+      justify-content: flex-start;
     }
+
     img {
-      height: auto; /* Adjust the logo height as needed */
-      width: 15%; /* Adjust the logo width as needed */
+      height: auto;
+      width: 15%;
       margin-left: 50px;
       border-radius: 100%;
       filter: grayscale(0.5);
       border: 3px solid white;
-      @media screen and (max-width: 800px) and (min-width: 651px) {
-       
-         width:10%; 
-         margin-left: 10px;
-      }
-      @media screen and (max-width: 651px) and (min-width: 350px) {
-        gap:10px;
-        width:10%; 
+
+      @media screen and (max-width: 800px) {
+        width: 10%;
         margin-left: 10px;
-        }
-        @media screen and (max-width: 351px) and (min-width: 200px) {
-          gap:10px;
-          width:10%; 
-          margin-left: 5px;
-          }
+      }
     }
 
     .navbar__text {
       font-weight: 500;
-      font-size: 14px; /* Adjust font size as needed */
-      margin-left: 20px; /* Add spacing between the image and text */
-      color: white; /* Customize text color as needed */
-      @media screen and (max-width: 800px) and (min-width: 651px) {
-      
-         font-size:14px;
-         margin-left: 10px;
-      }
-      @media screen and (max-width: 651px) and (min-width: 350px) {
-        font-size:12px;
+      font-size: $font-size-medium;
+      margin-left: 20px;
+      color: $font-color-white;
+
+      @media screen and (max-width: 800px) {
+        font-size: $font-size-medium;
         margin-left: 10px;
-        }
-      
+      }
     }
   }
 
-.navbar__weather{
-  position: absolute;
-  font-size: 14px;
-  top: 52%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  @media screen and (max-width: 1300px) and (min-width: 1100px) {
-    left: 30%;
-     
-  }
-  @media screen and (max-width: 1100px) and (min-width: 650px) {
-    left: 40%;
-     
-  }
-  @media screen and (max-width: 900px) and (min-width: 50px) {
-   display: none;
-  }
-}
+  // Weather Widget Styles
+  .navbar__weather {
+    position: absolute;
+    font-size: $font-size-medium;
+    top: 52%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 
+    @media screen and (max-width: 1300px) and (min-width: 1100px) {
+      left: 30%;
+    }
 
-.navbar__weather__list{
-  
-list-style-type: none;
-}
-  /* Links */
+    @media screen and (max-width: 1100px) and (min-width: 650px) {
+      left: 40%;
+    }
+
+    @media screen and (max-width: 900px) and (min-width: 50px) {
+      display: none;
+    }
+  }
+
+  .navbar__weather__list {
+    list-style-type: none;
+  }
+
+  // Links Styles
   .navbar__links {
     list-style: none;
     display: flex;
     gap: 40px;
     margin: 0;
     padding: 25px;
-    position: absolute; /* Position the ul element absolutely within the navbar */
-    top: 50%; /* Move the ul down to the vertical center of the navbar */
-    transform: translateY(-50%); /* Adjust for vertical alignment */
-    right: 20px; /* Position the ul on the right side */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+
     @media screen and (max-width: 651px) and (min-width: 200px) {
-    gap:10px;
-    padding:0;
-    display: flex;
-        flex-direction: column;
-        margin-right: 15px;
+      gap: 10px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      margin-right: 15px;
     }
+
     li {
       font-weight: 500;
       font-size: 18px;
       transition: 300ms ease;
+
       @media screen and (max-width: 800px) and (min-width: 651px) {
         font-size: 16px;
-         
       }
+
       @media screen and (max-width: 651px) and (min-width: 520px) {
         font-size: 14px;
-         padding:0;
+        padding: 0;
       }
+
       @media screen and (max-width: 520px) and (min-width: 200px) {
         font-size: 12px;
-        margin-right:10px;
-        
+        margin-right: 10px;
       }
+
       &:hover {
         transition: 300ms ease;
         transform: scale(1.1);
@@ -140,33 +130,33 @@ list-style-type: none;
 
       a {
         text-decoration: none;
-        color: white;
-        position: relative; /* Make the anchor a positioned element */
+        color: $font-color-white;
+        position: relative;
         transition: color 0.3s ease;
         padding-bottom: 5px;
         cursor: pointer;
+
         &:hover {
-          color: white; /* Change the color on hover as needed */
+          color: $font-color-white;
         }
 
-        /* Add the underline effect */
         &::before {
-          content: ''; /* Create a pseudo-element */
+          content: '';
           position: absolute;
           bottom: 0;
-          left: 0; /* Start from the left side */
-          width: 0; /* Initially, the underline has zero width */
-          height: 2px; /* Adjust the height as needed */
-          background-color: white; /* Color of the underline */
-          transition: width 0.3s ease; /* Transition the width property */
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: $font-color-white;
+          transition: width 0.3s ease;
         }
 
         &:hover::before {
-          width: 100%; /* Expand the underline to 100% on hover */
+          width: 100%;
         }
       }
     }
   }
 }
 
-
+// Additional Styles...
