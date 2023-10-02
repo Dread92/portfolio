@@ -1,0 +1,26 @@
+
+body {
+    margin: 0 auto;
+  }
+
+  .mainContainer{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+      
+  }
+
+
+  .image__wip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img{
+        @media screen and (max-width: 900px) and (min-width: 1px) {
+            width:66%;
+        }
+    }
+  }
