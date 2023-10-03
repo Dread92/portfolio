@@ -25,7 +25,7 @@ const Footer = () => {
         </a>
         
       </div>
-      <span>Made with React.js</span>
+      <span>Made with React.js+Vite and SASS</span>
       <button className={`back-to-top ${isScrolling ? 'scrolling' : ''}`} onClick={handleScrollToTop}>
         <FontAwesomeIcon icon={faArrowUp} />
       </button>
