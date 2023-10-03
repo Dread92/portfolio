@@ -103,7 +103,7 @@ $font-color-white: white;
       flex-direction: column;
       margin-right: 15px;
     }
-
+    
     li {
       font-weight: 500;
       font-size: 18px;
@@ -158,5 +158,7 @@ $font-color-white: white;
     }
   }
 }
-
+.projectLink{
+  text-decoration: none;
+}
 // Additional Styles...

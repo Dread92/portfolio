@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './navbar.scss';
 import logoImage from '../../assets/webdev.png';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll'; // Rename one of the imports
+import { Link as RouterLink } from 'react-router-dom'; // Rename the other import
+
+
 
 
 // Function to convert temperature from Kelvin to Celsius
@@ -47,7 +50,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      
+       < RouterLink className='projectLink ' to="/">
       <div className="navbar__logo">
         <img src={logoImage} alt="Logo" />
         <div className="navbar__text">
@@ -56,13 +59,18 @@ function Navbar() {
           Web Developer
         </div>
       </div>
+      </RouterLink>
       
       <ul className="navbar__links">
-        <li><a href="/">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
+      < RouterLink className='projectLink ' to="/">
+        <li><a>Home</a></li>
+</RouterLink>
+
+        < RouterLink className='projectLink ' to="/projects">
+        <li><a>Projects</a></li></RouterLink>
         <li>
           {/* Use Link from react-scroll for smooth scrolling */}
-          <Link
+          <ScrollLink
             to="homePage__secondblock"
             spy={true}
             smooth={true}
@@ -70,11 +78,11 @@ function Navbar() {
             offset={-70} // Adjust the offset if needed to account for your navbar's height
           >
             About
-          </Link>
+          </ScrollLink>
         </li>
         <li>
           {/* Use Link from react-scroll for smooth scrolling */}
-          <Link
+          <ScrollLink
             to="homePage__thirdblock"
             spy={true}
             smooth={true}
@@ -82,7 +90,7 @@ function Navbar() {
             offset={-70} // Adjust the offset if needed to account for your navbar's height
           >
             Contact
-          </Link>
+          </ScrollLink>
         </li>
         </ul>
         {weatherData && (
