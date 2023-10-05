@@ -28,7 +28,7 @@ function HomePage() {
   }, []);
 
   return (
-    <div className='homePage__container'>
+    <main className='homePage__container'>
       <section className='homePage__firstblock'>
         <div className='homePage__text'>Hi, I'm Guillaume</div>
         <div className='homePage__text__description'>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</div>
@@ -119,7 +119,7 @@ function HomePage() {
         </div>
       </div>
     </section>
-    </div>
+    </main>
   );
 }
 
