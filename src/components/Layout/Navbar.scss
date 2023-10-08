@@ -66,7 +66,9 @@ $font-color-white: white;
     left: 20%;
     transform: translate(-50%, -50%);
     text-align: center;
-
+    @media screen and (max-width: 2000px) and (min-width: 1301px) {
+      left: 28%;
+    }
     @media screen and (max-width: 1300px) and (min-width: 1100px) {
       left: 30%;
     }
@@ -161,4 +163,3 @@ $font-color-white: white;
 .projectLink{
   text-decoration: none;
 }
-// Additional Styles...
